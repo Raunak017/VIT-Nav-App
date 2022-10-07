@@ -1,5 +1,5 @@
 
-# NavAppVIT
+# VIT Nav App
 
 ### An App developed for the Students inside University to get information about places inside the University.
 ## Features
