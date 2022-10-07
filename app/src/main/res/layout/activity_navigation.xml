@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.NavigationActivity"
+    android:theme="@style/Theme.NavApp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        tools:context=".Activity.NavigationActivity" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/bottom_sheet_background">
+
+        <ImageView
+            android:id="@+id/notchawa2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_line_bottom_sheet"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To:"
+            android:fontFamily="@font/medium"
+            android:textSize="15dp"
+            android:textColor="@color/heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/notchawa2" />
+
+        <TextView
+            android:id="@+id/navDestination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="40dp"
+            android:fontFamily="@font/medium"
+            android:text="SCOPE HoD Office"
+            android:textColor="@color/boldHeading"
+            android:textSize="25dp"
+            map:layout_constraintEnd_toStartOf="@+id/navCancel"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@id/textView" />
+
+        <TextView
+            android:id="@+id/navAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:fontFamily="@font/book"
+            android:text="TextView"
+            android:lineSpacingExtra="3dp"
+            android:textColor="@color/subHeading"
+            map:layout_constraintEnd_toEndOf="@+id/navDestination"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@id/navDestination" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/navGo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            map:cardBackgroundColor="@color/admin"
+            map:cardCornerRadius="12dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginBottom="19dp"
+                    android:fontFamily="@font/medium"
+                    android:text="Go"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    map:layout_constraintBottom_toBottomOf="parent"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toStartOf="parent"
+                    map:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_arrow_white"
+                    map:layout_constraintBottom_toBottomOf="@+id/textView5"
+                    map:layout_constraintEnd_toStartOf="@+id/textView5"
+                    map:layout_constraintTop_toTopOf="@+id/textView5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/navCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cancel"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/notchawa2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/animationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/anim_background"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="1.0"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="0.0">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="140dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent"
+            map:lottie_autoPlay="true"
+            map:lottie_loop="true"
+            map:lottie_rawRes="@raw/animation" />
+
+        <TextView
+            android:id="@+id/please_wait_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32sp"
+            android:fontFamily="@font/bold"
+            android:lineSpacingExtra="3dp"
+            android:text="Please Wait"
+            android:textAlignment="center"
+            android:textColor="@color/anim_please_wait"
+            android:textSize="17sp"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@id/animationView" />
+
+
+        <TextView
+            android:id="@+id/did_you_know"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="Did you know?"
+            android:textColor="@color/anim_did_you_know"
+            android:textSize="18dp"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="@id/please_wait_text" />
+
+        <TextView
+            android:id="@+id/fact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="70dp"
+            android:fontFamily="@font/book"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="VIT has 35,000 students from 54 different countries and from all the states of India"
+            android:textColor="@color/anim_did_you_know"
+
+            android:textSize="14sp"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/did_you_know" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
