@@ -9,11 +9,6 @@
 - Dark Mode
 - Navigation
 
-## Installation
-The application can be downloaded from Google Play Store.
-
-Use the link :
-https://play.google.com/store/apps/details?id=edu.vit.vtop.navapp
 
 ## Screenshots of the Application
 
